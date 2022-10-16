@@ -2,3 +2,126 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --dark-primary: rgb(179, 179, 179);
+    --dark-primary2: rgb(14, 14, 14);
+    --dark-primary3: rgb(29, 29, 29);
+    --dark-secondary: rgb(24, 24, 24);
+    --light-secondary: rgb(226, 226, 226);
+}
+
+body {
+    background-color: var(--dark-primary);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-primary2);
+    height: 100px;
+}
+
+.title {
+    color: var(--light-secondary);
+    margin-left: 50px;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.link, .link2 {
+    display: flex;
+    background-color: var(--dark-primary2);
+    border: 1px solid var(--light-secondary);
+    font-size: 1.3rem;
+    margin-left: 10px;
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    z-index: 2;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.link:hover, .link2:hover {
+    background-color: var(--dark-secondary);
+}
+
+.link > a, .link2 > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--light-secondary);
+    list-style: none;
+    width: 100px;
+    height: 40px;
+}
+
+#arrow {
+    color:var(--light-secondary);
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+/* Drop down */
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-primary3);
+    gap: 10px;
+    width: 100px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+}
+
+.dropDown.active {
+    opacity: 1;
+    pointer-events: all;
+    top: 70px;
+}
+
+.subLink {
+    display: flex;
+    cursor: pointer;
+    list-style: none;
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: auto;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(83, 83, 83, 0.397);
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subLink a {
+    color: var(--light-secondary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.subLink:hover {
+    border-bottom: 1px solid white;
+}
+
